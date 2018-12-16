@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ICTAK Assignment 02</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="form-content">
+        <div class="form-item-box">
+            <div class="col-left">
+                <h1>ICTAK</h1>
+            </div>
+            <div class="col-right">
+                <form id="register_form" action="" method="POST">
+                    <div class="form-container">
+                    <h2>Register</h2>
+                    <input type="text" name="username" id="username" class="form-control" placeholder="Full Name" required>
+                    <input type="email" name="email" id="emailId" class="form-control" placeholder="Email"  required>
+                    <input type="text" name="password" id="password" class="form-control" placeholder="Password" required>
+                    <select name="gender" class="form-control" id="gender">
+                        <option value="">Select your gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <div class="checkbox">
+                        <label class="label">Nationality:</label>
+                        <label><input type="radio" name="nationality" value="indian">Indian</label>
+                        <label><input type="radio" name="nationality" value="others">Others</label>
+                    </div>
+                    <div class="terms">
+                        <label><input type="checkbox" name="terms_cond" id="terms_cond">I accept the terms and conditions</label>
+                    </div>
+                    <button type="button" name="btnsubmit" class="btn" onclick="validateRegisterForm()">Register</button>
+                    <a href="#" id="login_link" onclick="form_navigate()">Login</a>
+                    </div>
+                </form>
+                <form id="login_form" action="" method="POST" style="display:none;">
+                    <div class="form-container">
+                    <h2>Login</h2>
+                    <input type="email" name="email" id="log_email" class="form-control" placeholder="Email" required>
+                    <input type="text" name="password" id="log_pass" class="form-control" placeholder="Password" required>
+                    <button id="" class="btn" value="Login" onclick="validateLoginForm()">Login</button>
+                    <a href="#" id="register_link" onclick="form_navigate()">Register</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

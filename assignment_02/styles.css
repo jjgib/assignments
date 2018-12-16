@@ -1,0 +1,93 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    /*background-color: #00cec9 !important;*/
+    background-image:linear-gradient(to bottom,#00cec9,#0cebeb);
+}
+.form-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 1px);
+}
+.form-item-box{
+    display: flex;
+    min-height: 379px;
+    max-width: 620px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 2px 2px 8px #999;
+}
+.col-left{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    background-image: url(img/bg-img.jpg);
+    background-size: cover;
+}
+.col-right{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding:0 15px 30px;
+}
+.col-right .form-container{
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    font-size: 60px;
+    color:#000;
+    margin-top: 66px;
+    font-weight: bold;
+}
+h2{
+    font-size:24px;
+    font-weight: normal;
+    margin-bottom: 13px;
+    margin-top: 30px;
+}
+.form-control{
+    display: flex;
+    border: 1px solid #ced4da;
+    font-size: 12px;
+    color:#000;
+    line-height: 1.5rem;
+    margin-bottom: 12px;
+    box-shadow: 2px 2px 0px #ddd;
+    padding:0 6px;
+}
+select.form-control{
+    height: 32px;
+}
+.checkbox, .terms{margin-bottom: 12px;}
+.checkbox label{font-size: 14px;}
+.terms label{font-size: 14px;}
+.checkbox .label{font-weight: bold;}
+.btn{
+    background-color:#007bff;
+    border:1px solid #007bff;
+    color:#fff;
+    padding:7px 0;
+    font-weight: bold;
+    box-shadow: 2px 2px 0px #ddd;
+    cursor: pointer;
+}
+#login_link,#register_link{
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 12px;
+}
+#login_form{
+    display: none;
+}
+@media (min-width:320px) and (max-width:480px){
+    .form-item-box{
+        flex-direction: column;
+    }
+    .col-left, .col-right{
+        width:auto;
+    }
+}

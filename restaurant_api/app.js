@@ -26,7 +26,7 @@ app.post('/save',(req,res)=>{
             res.send(result);
         }, (error)=>{
             res.status(400).send(error);
-        });
+        }); 
 
 });
 
@@ -41,7 +41,15 @@ app.get('/allRestaurants',(req,res)=>{
 
 //Find by id
 app.get('/restuarants/:rId',(req,res)=>{
-    
+    var id = req.params.rId;
+    Restaurants.find(id).then( (data)=>{
+        if(!data){
+            return res.status(400).send();
+        }
+        res.send(data);
+    }).catch( (e)=>{
+        res.status(400).send();
+    });
 });
 
 app.listen(3000, ()=>{
